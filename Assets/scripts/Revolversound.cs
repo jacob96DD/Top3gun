@@ -54,7 +54,7 @@ public class Revolversound : MonoBehaviour
                 shoot = true;
               
             }
-            else if ( shoot ) {
+            if ( shoot ) {
                 ReloadSound.Play();
                 shoot = false;
             }
