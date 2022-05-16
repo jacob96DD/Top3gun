@@ -13,6 +13,8 @@ public class Revolversound : MonoBehaviour
     bool shoot = false;
     bool reload = false;
 
+    public Animator fireAnim;
+
     // Update is called once per frame
      void Update()
      {
@@ -23,7 +25,6 @@ public class Revolversound : MonoBehaviour
          }
          
          // if no cooldown shoot again
-
          else if (Input.GetKey(KeyCode.Space))
         {
             counter = counter + 1;
@@ -33,6 +34,7 @@ public class Revolversound : MonoBehaviour
             if ( !shoot) {
                 RevolverSound.Play();
                 shoot = true;
+                fireAnim.SetTrigger("fireAnim");
               
             }
             if ( shoot ) {
