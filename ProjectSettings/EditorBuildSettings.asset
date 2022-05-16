@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AR_Scene.unity
     guid: 17d2a00d9e335014a847da0268628b8f
+  - enabled: 1
+    path: Assets/Scenes/Revolver.unity
+    guid: e4aab6369aa4d934caa6d7b6a52bdfd9
+  - enabled: 1
+    path: Assets/Scenes/Shotgun.unity
+    guid: 0b5583815fa6746d6aec07e0437a96cf
+  - enabled: 1
+    path: Assets/Scenes/Sniper.unity
+    guid: d7406d4502ad547e9b8fcce91dbe107f
   m_configObjects: {}
