@@ -17,15 +17,12 @@ public class Revolversound : MonoBehaviour
     bool shoot = false;
     bool reload = false;
 
-<<<<<<< HEAD
     public Animator fireAnim;
-=======
     void start()
     {
         lastAcceleration = Input.acceleration;
 
     }
->>>>>>> main
 
     // Update is called once per frame
      void Update()
@@ -44,12 +41,8 @@ public class Revolversound : MonoBehaviour
          }
          
          // if no cooldown shoot again
-<<<<<<< HEAD
-         else if (Input.GetKey(KeyCode.Space))
-=======
 
          else if (Input.GetKey(KeyCode.Space) || force > 1.0f)
->>>>>>> main
         {
 
 
