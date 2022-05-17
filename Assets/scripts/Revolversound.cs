@@ -80,6 +80,19 @@ public class Revolversound : MonoBehaviour
                 
             }
 
+            foreach(Touch touch in Input.touches)
+        {
+            if (touch.phase == TouchPhase.Began)
+                 
+
+            {
+
+                 RevolverSound.Play();
+               
+                fireAnim.SetTrigger("fireAnim");
+          
+                ReloadSound.Play();
+            }}
         if (force < 1.0f)
         {
             isTriggered = false;
