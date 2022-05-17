@@ -18,6 +18,7 @@ public class Revolversound : MonoBehaviour
     bool shoot = false;
     bool reload = false;
 
+    public Animator fireAnim;
     void start()
     {
         lastAcceleration = Input.acceleration;
@@ -53,6 +54,7 @@ public class Revolversound : MonoBehaviour
             if ( !shoot) {
                 RevolverSound.Play();
                 shoot = true;
+                fireAnim.SetTrigger("fireAnim");
               
             }
             if (shoot) {
