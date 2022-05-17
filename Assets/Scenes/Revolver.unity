@@ -802,7 +802,7 @@ GameObject:
   - component: {fileID: 1596594545}
   m_Layer: 0
   m_Name: muzzle flash_transparent_4
-  m_TagString: Untagged
+  m_TagString: animSprite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -887,8 +887,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1596594544}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 220.02214, y: 59.978714, z: -4320}
-  m_LocalScale: {x: 151.67961, y: 151.67961, z: 151.67961}
+  m_LocalPosition: {x: 199.61, y: 59.9, z: -4320}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2025987998}
