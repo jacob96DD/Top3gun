@@ -9,6 +9,7 @@ public class Revolversound : MonoBehaviour
     double counter = 0;
     public bool IsAvailable = true;
     public float CooldownDuration = 1.0f;
+    private bool isTriggered = false;
 
 
     private Vector3 lastAcceleration;
@@ -41,10 +42,10 @@ public class Revolversound : MonoBehaviour
          
          // if no cooldown shoot again
 
-         else if (Input.GetKey(KeyCode.Space) || force > 1.0f)
+         else if (force > 2.1f && isTriggered == false)
         {
 
-
+            isTriggered = true;
             counter = counter + 1;
             Debug.Log("shots fired");
 
@@ -54,16 +55,20 @@ public class Revolversound : MonoBehaviour
                 shoot = true;
               
             }
-            if ( shoot ) {
+            if (shoot) {
                 ReloadSound.Play();
                 shoot = false;
             }
            
-
+            
 
             //        playSound();
             // start the cooldown timer
             StartCoroutine(StartCooldown());
+        }
+
+        if(force < 1.0f) {
+            isTriggered = false;
         }
          
     //accelerator
