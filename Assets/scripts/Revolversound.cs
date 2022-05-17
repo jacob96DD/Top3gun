@@ -8,21 +8,27 @@ public class Revolversound : MonoBehaviour
 
     public AudioSource ReloadSound;
 
-    double counter = 0;
+    public AudioSource Changemag;
+
+    int counter = 0;
 
     public bool IsAvailable = true;
 
     public float CooldownDuration = 1.0f;
 
+    public float CooldownReload = 5.0f;
+
     private bool isTriggered = false;
 
     private Vector3 lastAcceleration;
 
-    bool shoot = false;
-
     bool reload = false;
 
     public Animator fireAnim;
+
+    public float magasin = 6;
+
+    
 
     void start()
     {
@@ -43,30 +49,36 @@ public class Revolversound : MonoBehaviour
         if (IsAvailable == false)
         {
             return;
-        } // if no cooldown shoot again
-        else if (force > 2.1f && isTriggered == false || Input.GetKey("space"))
+
+        } // if no cooldown and space og gravity is triggered shoot again
+        else if (force > 2.1f && isTriggered == false || Input.GetKey("space") && magasin > counter)
         {
             isTriggered = true;
             counter = counter + 1;
-            Debug.Log("shots fired");
+            Debug.Log(counter);
 
             //play sounds
-            if (!shoot)
-            {
+          
                 RevolverSound.Play();
-                shoot = true;
+               
                 fireAnim.SetTrigger("fireAnim");
-            }
-            if (shoot)
-            {
+          
                 ReloadSound.Play();
-                shoot = false;
-            }
+       
 
             //        playSound();
             // start the cooldown timer
             StartCoroutine(StartCooldown());
         }
+
+        if (counter == magasin)
+            {
+                Debug.Log("reload");
+                Changemag.Play();
+                
+                StartCoroutine(StartReload());
+                
+            }
 
         if (force < 1.0f)
         {
@@ -87,6 +99,14 @@ public class Revolversound : MonoBehaviour
     {
         IsAvailable = false;
         yield return new WaitForSeconds(CooldownDuration);
+        IsAvailable = true;
+    }
+
+    public IEnumerator StartReload()
+    {
+        IsAvailable = false;
+        yield return new WaitForSeconds(CooldownReload);
+        counter = 0;
         IsAvailable = true;
     }
 }
