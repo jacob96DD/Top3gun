@@ -67,7 +67,7 @@ public class Revolversound : MonoBehaviour
 
             foreach(Touch touch in Input.touches)
         {
-            if (touch.phase == TouchPhase.Began && magasin > counter)
+            if (touch.phase == TouchPhase.Stationary && magasin > counter)
                  
 
             {
