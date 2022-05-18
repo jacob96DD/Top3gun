@@ -65,8 +65,6 @@ public class Revolversound : MonoBehaviour
                 
             }
 
-<<<<<<< Updated upstream
-=======
             foreach(Touch touch in Input.touches)
         {
             if (touch.phase == TouchPhase.Began && magasin > counter)
@@ -76,7 +74,6 @@ public class Revolversound : MonoBehaviour
 
                 Shoot();
             }}
->>>>>>> Stashed changes
         if (force < 1.0f)
         {
             isTriggered = false;
