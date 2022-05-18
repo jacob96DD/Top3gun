@@ -544,7 +544,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2025987998}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -840,7 +840,7 @@ MonoBehaviour:
   ReloadSound: {fileID: 976118979}
   Changemag: {fileID: 306297662}
   IsAvailable: 1
-  CooldownDuration: 3
+  CooldownDuration: 1
   CooldownReload: 4
   fireAnim: {fileID: 1871201964}
   magasin: 5
@@ -1021,8 +1021,8 @@ RectTransform:
   - {fileID: 1053804835}
   - {fileID: 207914357}
   - {fileID: 1335651074}
-  - {fileID: 976118978}
   - {fileID: 306297661}
+  - {fileID: 976118978}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1112,7 +1112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971292980077315801, guid: fe428cbe6974ec54681d8bb840bd569f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.9050293
+      value: 2.905014
       objectReference: {fileID: 0}
     - target: {fileID: 8971292980077315801, guid: fe428cbe6974ec54681d8bb840bd569f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
