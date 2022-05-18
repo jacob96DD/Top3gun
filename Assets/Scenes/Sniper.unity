@@ -378,7 +378,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 982cb71308d714efa82d8aeb97e6bf5d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 053132cddf5fe488db3ef82f470d72a9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -656,7 +656,12 @@ MonoBehaviour:
   RevolverSound: {fileID: 207914359}
   ReloadSound: {fileID: 976118979}
   IsAvailable: 1
+<<<<<<< Updated upstream
   CooldownDuration: 3
+=======
+  CooldownDuration: 1
+  CooldownReload: 4
+>>>>>>> Stashed changes
   fireAnim: {fileID: 1871201964}
 --- !u!81 &1399943450
 AudioListener:
@@ -924,7 +929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971292980077315801, guid: fe428cbe6974ec54681d8bb840bd569f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.9050293
+      value: 2.905014
       objectReference: {fileID: 0}
     - target: {fileID: 8971292980077315801, guid: fe428cbe6974ec54681d8bb840bd569f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

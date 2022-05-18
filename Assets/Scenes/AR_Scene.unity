@@ -288,7 +288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971292980077315801, guid: fe428cbe6974ec54681d8bb840bd569f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.9050293
+      value: 2.905014
       objectReference: {fileID: 0}
     - target: {fileID: 8971292980077315801, guid: fe428cbe6974ec54681d8bb840bd569f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -527,7 +527,12 @@ MonoBehaviour:
   RevolverSound: {fileID: 1271234893}
   ReloadSound: {fileID: 1271234893}
   IsAvailable: 1
+<<<<<<< Updated upstream
   CooldownDuration: 0.1
+=======
+  CooldownDuration: 0.12
+  CooldownReload: 4
+>>>>>>> Stashed changes
   fireAnim: {fileID: 1568560493}
 --- !u!4 &1399943448
 Transform:
