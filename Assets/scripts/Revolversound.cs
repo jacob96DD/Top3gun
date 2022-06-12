@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Revolversound : MonoBehaviour
 {
@@ -28,7 +29,8 @@ public class Revolversound : MonoBehaviour
 
     public float magasin = 6;
 
-    
+    public float shotsFired;
+
 
     void start()
     {
@@ -49,31 +51,27 @@ public class Revolversound : MonoBehaviour
         if (IsAvailable == false)
         {
             return;
-
         } // if no cooldown and space og gravity is triggered shoot again
         else if (force > 2.1f && isTriggered == false || Input.GetKey("space"))
         {
-           Shoot();
+            Shoot();
         }
 
         if (counter == magasin)
-            {
-                Debug.Log("reload");
-                Changemag.Play();
-                
-                StartCoroutine(StartReload());
-                
-            }
+        {
+            Debug.Log("reload");
+            Changemag.Play();
 
-            foreach(Touch touch in Input.touches)
+            StartCoroutine(StartReload());
+        }
+
+        foreach (Touch touch in Input.touches)
         {
             if (touch.phase == TouchPhase.Stationary && magasin > counter)
-                 
-
             {
-
                 Shoot();
-            }}
+            }
+        }
         if (force < 1.0f)
         {
             isTriggered = false;
@@ -106,40 +104,35 @@ public class Revolversound : MonoBehaviour
 
     public void Shoot()
     {
-        if(magasin -1 > counter){
-        
-        isTriggered = true;
-        counter = counter + 1;
-        Debug.Log(counter);
+        if (magasin - 1 > counter)
+        {
+            isTriggered = true;
+            counter = counter + 1;
+            shotsFired = counter;
+            Debug.Log (counter);
 
             //play sounds
-          
-                RevolverSound.Play();
-               
-                fireAnim.SetTrigger("fireAnim");
-          
-                ReloadSound.Play();
+            RevolverSound.Play();
 
-             //        playSound();
+            fireAnim.SetTrigger("fireAnim");
+
+            ReloadSound.Play();
+
+            //        playSound();
             // start the cooldown timer
             StartCoroutine(StartCooldown());
         }
-
-        else if(magasin -1 == counter){
-        
-        isTriggered = true;
-        counter = counter + 1;
-        Debug.Log(counter);
+        else if (magasin - 1 == counter)
+        {
+            isTriggered = true;
+            counter = counter + 1;
+            shotsFired = counter;
+            Debug.Log (counter);
 
             //play sounds
-          
-                RevolverSound.Play();
-               
-                fireAnim.SetTrigger("fireAnim");
-    
-       
+            RevolverSound.Play();
 
-        
+            fireAnim.SetTrigger("fireAnim");
         }
     }
 }
