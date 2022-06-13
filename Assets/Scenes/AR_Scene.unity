@@ -308,7 +308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971292980077315801, guid: fe428cbe6974ec54681d8bb840bd569f, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.79875
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8971292980077315801, guid: fe428cbe6974ec54681d8bb840bd569f, type: 3}
       propertyPath: m_AnchorMax.y
@@ -316,19 +316,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971292980077315801, guid: fe428cbe6974ec54681d8bb840bd569f, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8971292980077315801, guid: fe428cbe6974ec54681d8bb840bd569f, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.89100003
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8971292980077315801, guid: fe428cbe6974ec54681d8bb840bd569f, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -227.34
+      value: -668.33997
       objectReference: {fileID: 0}
     - target: {fileID: 8971292980077315801, guid: fe428cbe6974ec54681d8bb840bd569f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -5.8099976
+      value: 51.190002
       objectReference: {fileID: 0}
     - target: {fileID: 8971292980077315801, guid: fe428cbe6974ec54681d8bb840bd569f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -360,11 +360,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971292980077315801, guid: fe428cbe6974ec54681d8bb840bd569f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.5
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8971292980077315801, guid: fe428cbe6974ec54681d8bb840bd569f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.9050293
+      value: -25.59497
       objectReference: {fileID: 0}
     - target: {fileID: 8971292980077315801, guid: fe428cbe6974ec54681d8bb840bd569f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -406,7 +406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3963611541942433058, guid: d9b55fcba7ba9ca4fbd9d92d92167bce, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3963611541942433058, guid: d9b55fcba7ba9ca4fbd9d92d92167bce, type: 3}
       propertyPath: m_AnchorMax.x
@@ -702,14 +702,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c7869ff72bf2c745b121f8cb735e304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RevolverSound: {fileID: 1271234893}
+  GunSound: {fileID: 1271234893}
   ReloadSound: {fileID: 1271234893}
   Changemag: {fileID: 2031267969}
+  fireAnim: {fileID: 1568560493}
   IsAvailable: 1
   CooldownDuration: 0.1
   CooldownReload: 4
-  fireAnim: {fileID: 1568560493}
   magasin: 30
+  bullet: {fileID: 8943043108065607742, guid: d56430a3287cea148a4a5dbd5165995f, type: 3}
 --- !u!4 &1399943448
 Transform:
   m_ObjectHideFlags: 0
