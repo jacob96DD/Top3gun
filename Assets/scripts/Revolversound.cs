@@ -31,8 +31,6 @@ public class Revolversound : MonoBehaviour
     
     private float Rounds = 0;
 
-    
-
     void start()
     {
         lastAcceleration = Input.acceleration;
@@ -83,17 +81,8 @@ public class Revolversound : MonoBehaviour
             isTriggered = false;
         }
 
-
-        //accelerator
     }
 
-    //  public IEnumerator playSound()
-    //      {
-    //          audio.clip = RevolverSound;
-    //          RevolverSound.Play();
-    //          yield return new WaitForSeconds(audio.clip.length);
-    //          ReloadSound.Play();
-    //      }
     public IEnumerator StartCooldown()
     {
         IsAvailable = false;
@@ -123,17 +112,13 @@ public class Revolversound : MonoBehaviour
         Debug.Log(Rounds);
         roundsLeft.text = "bullets left: " + Rounds.ToString();
        
-
-            //play sounds
-          
                 RevolverSound.Play();
                
                 fireAnim.SetTrigger("fireAnim");
           
                 ReloadSound.Play();
 
-             //        playSound();
-            // start the cooldown timer
+
             StartCoroutine(StartCooldown());
         }
 
@@ -142,6 +127,10 @@ public class Revolversound : MonoBehaviour
         isTriggered = true;
         counter = counter + 1;
         Debug.Log(counter);
+
+        Rounds = magasin;
+        Rounds -= counter;
+        roundsLeft.text = "bullets left: " + Rounds.ToString();
 
             //play sounds
           
