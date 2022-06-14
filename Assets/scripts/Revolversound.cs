@@ -62,6 +62,7 @@ public class Revolversound : MonoBehaviour
             {
                 Debug.Log("reload");
                 Changemag.Play();
+                roundsLeft.text = "Reloading: " + Rounds.ToString();
                 
                 StartCoroutine(StartReload());
                 
@@ -96,6 +97,7 @@ public class Revolversound : MonoBehaviour
         yield return new WaitForSeconds(CooldownReload);
         counter = 0;
         IsAvailable = true;
+        roundsLeft.text = "bullets left: " + magasin.ToString();
     }
 
     public void Shoot()
