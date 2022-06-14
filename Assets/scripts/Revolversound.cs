@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Revolversound : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Revolversound : MonoBehaviour
 
     int counter = 0;
 
-    public bool IsAvailable = true;
+    private bool IsAvailable = true;
 
     public float CooldownDuration = 1.0f;
 
@@ -22,11 +23,12 @@ public class Revolversound : MonoBehaviour
 
     private Vector3 lastAcceleration;
 
-    bool reload = false;
-
     public Animator fireAnim;
 
     public float magasin = 6;
+
+    public TextMeshProUGUI roundsLeft;
+    private float Rounds = 0;
 
     
 
@@ -110,7 +112,10 @@ public class Revolversound : MonoBehaviour
         
         isTriggered = true;
         counter = counter + 1;
+        
         Debug.Log(counter);
+        
+        roundsLeft.text = "bullets left: " + counter.ToString();
 
             //play sounds
           
