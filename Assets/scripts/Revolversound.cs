@@ -13,7 +13,7 @@ public class Revolversound : MonoBehaviour
 
     int counter = 0;
 
-    private bool IsAvailable = true;
+    public bool IsAvailable = true;
 
     public float CooldownDuration = 1.0f;
 
@@ -28,6 +28,7 @@ public class Revolversound : MonoBehaviour
     public float magasin = 6;
 
     public TextMeshProUGUI roundsLeft;
+    
     private float Rounds = 0;
 
     
@@ -56,6 +57,7 @@ public class Revolversound : MonoBehaviour
         else if (force > 2.1f && isTriggered == false || Input.GetKey("space"))
         {
            Shoot();
+           
         }
 
         if (counter == magasin)
@@ -80,6 +82,7 @@ public class Revolversound : MonoBehaviour
         {
             isTriggered = false;
         }
+
 
         //accelerator
     }
@@ -112,10 +115,14 @@ public class Revolversound : MonoBehaviour
         
         isTriggered = true;
         counter = counter + 1;
-        
         Debug.Log(counter);
-        
-        roundsLeft.text = "bullets left: " + counter.ToString();
+
+        Rounds = magasin;
+        Rounds -= counter;
+                        
+        Debug.Log(Rounds);
+        roundsLeft.text = "bullets left: " + Rounds.ToString();
+       
 
             //play sounds
           
